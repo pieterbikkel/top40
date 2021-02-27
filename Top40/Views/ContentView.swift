@@ -11,6 +11,7 @@ import AVFoundation
 struct ContentView: View {
     @State var player = AVPlayer()
     
+    @ObservedObject private var categoryClass = CurrentCategory()
     @ObservedObject private var top40List = Top40Response()
     
     var body: some View {
@@ -33,13 +34,13 @@ struct ContentView: View {
                 }.padding(.horizontal)
                 CategoriesView().padding()
                 HStack{
-                    Text("Top40")
+                    Text(categoryClass.getCurrentList())
                         .foregroundColor(Color("almostBlack"))
                         .font(.title)
                         .fontWeight(.bold)
                     Spacer()
                     Button {
-                        print(top40List.top40News)
+                        print(categoryClass.getCurrentList())
                     } label: {
                         Image(systemName: "ellipsis")
                             .foregroundColor(Color("almostBlack"))
