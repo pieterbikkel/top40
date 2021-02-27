@@ -14,8 +14,24 @@ struct ContentView: View {
     @ObservedObject private var top40List = Top40Response()
     
     var body: some View {
+        HStack{
+            Text("TOP 40")
+                .fontWeight(.heavy)
+        }
+        .multilineTextAlignment(.center)
+        .font(.largeTitle)
+        .padding(.vertical, 10)
+        .foregroundColor(.red)
         NavigationView() {
             VStack {
+                HStack {
+                    Text("Categorieën")
+                        .foregroundColor(Color("almostBlack"))
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }.padding(.horizontal)
+                CategoriesView().padding()
                 HStack{
                     Text("Top40")
                         .foregroundColor(Color("almostBlack"))
@@ -29,14 +45,14 @@ struct ContentView: View {
                             .foregroundColor(Color("almostBlack"))
                             .font(.title)
                     }
-                }.padding(.horizontal)
+                }.padding(.horizontal, 20)
                 List(top40List.top40List, id: \.position) { song in
                     ListItemView(player: player, song: song)
                         //.background(Color.green)
                 }.listStyle(PlainListStyle())
                 .padding(0)
             }
-            .navigationTitle("TOP40")
+            .navigationBarHidden(true)
         }
     }
 }

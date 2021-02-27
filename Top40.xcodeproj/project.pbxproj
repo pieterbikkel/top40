@@ -22,6 +22,7 @@
 		2BBBA1D725E00B280054D6F5 /* SF-Pro-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBA1D125E00B280054D6F5 /* SF-Pro-Rounded-Thin.otf */; };
 		2BE6647825E8539700100BBB /* Top40List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647725E8539700100BBB /* Top40List.swift */; };
 		2BE6647B25E853A900100BBB /* Top40News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647A25E853A900100BBB /* Top40News.swift */; };
+		2BE6647F25E9458D00100BBB /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647E25E9458D00100BBB /* CategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2BBBA1D125E00B280054D6F5 /* SF-Pro-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		2BE6647725E8539700100BBB /* Top40List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40List.swift; sourceTree = "<group>"; };
 		2BE6647A25E853A900100BBB /* Top40News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40News.swift; sourceTree = "<group>"; };
+		2BE6647E25E9458D00100BBB /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBBA1A325DEE7F00054D6F5 /* ContentView.swift */,
+				2BE6647E25E9458D00100BBB /* CategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				2BBBA1C225DF13BA0054D6F5 /* ListView.swift in Sources */,
 				2BE6647825E8539700100BBB /* Top40List.swift in Sources */,
+				2BE6647F25E9458D00100BBB /* CategoriesView.swift in Sources */,
 				2BE6647B25E853A900100BBB /* Top40News.swift in Sources */,
 				2BBBA1A425DEE7F00054D6F5 /* ContentView.swift in Sources */,
 				2BBBA1BB25DF0CFC0054D6F5 /* Top40.swift in Sources */,
