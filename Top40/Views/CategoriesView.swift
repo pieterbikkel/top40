@@ -33,7 +33,6 @@ struct CategoriesView: View {
             HStack(spacing: 20){
                 ForEach(categories) {category in
                     VStack(alignment: .leading,spacing: 12){
-                        
                         Button(action : {
                             
                         }, label: {
@@ -42,14 +41,7 @@ struct CategoriesView: View {
                                 .frame(width: 240, height: 180)
                                 .cornerRadius(10)
                         })
-                        
                         Text(category.name).fontWeight(.heavy)
-                        
-                        HStack(spacing: 5){
-                            
-                            Image(systemName: "map")
-                            Text("Vancouver, CA").foregroundColor(.gray)
-                        }
                     }
                 }
             }
