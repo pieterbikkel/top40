@@ -6,37 +6,17 @@
 //
 
 import SwiftUI
-import WebKit
-
-struct Category: Identifiable {
-    let id = UUID()
-    let image: String
-    let name: String
-    let url: String
-}
-
-class CurrentCategory: ObservableObject {
-    @Published private var _currentList = "Top 40"
-
-    var currentList: String {
-        get { return _currentList }
-        set { _currentList = newValue }
-    }
-}
 
 struct CategoriesView: View {
     
     @ObservedObject var categoryClass: CurrentCategory
     
-    let categories = [Category(image: "top40", name: "Top 40", url: ""),
-                      Category(image: "tipparade", name: "Tipparade", url: ""),
-                      Category(image: "global", name: "Global Top 40", url: ""),
-                      Category(image: "airplay", name: "Airplay Top 40", url: ""),
-                      Category(image: "streaming", name: "Streaming Top 40", url: ""),
-                      Category(image: "sterren", name: "Sterren NL Top 25", url: ""), ]
-    
-    @State var show = false
-    var webView: WKWebView!
+    let categories = [Category(image: "top40", name: "Top 40", url: "https://www.top40.nl/top40"),
+                      Category(image: "tipparade", name: "Tipparade", url: "https://www.top40.nl/tipparade"),
+                      Category(image: "global", name: "Global Top 40", url: "https://www.top40.nl/global-top40"),
+                      Category(image: "airplay", name: "Airplay Top 40", url: "https://www.top40.nl/airplay-top40"),
+                      Category(image: "streaming", name: "Streaming Top 40", url: "https://www.top40.nl/streaming-top40"),
+                      Category(image: "sterren", name: "Sterren NL Top 25", url: "https://www.top40.nl/sterren-nl-top25"), ]
     
     var body: some View {
         
@@ -45,8 +25,8 @@ struct CategoriesView: View {
                 ForEach(categories) {category in
                     VStack(alignment: .leading,spacing: 12){
                         Button(action : {
-                            categoryClass.currentList = category.name
-                            print(categoryClass.currentList)
+                            categoryClass.currentListName = category.name
+                            categoryClass.currentListURL = category.url
                         }, label: {
                             Image(category.image).renderingMode(.original)
                                 .resizable()

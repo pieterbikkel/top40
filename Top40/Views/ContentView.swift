@@ -34,22 +34,21 @@ struct ContentView: View {
                 }.padding(.horizontal)
                 CategoriesView(categoryClass: categoryClass).padding()
                 HStack{
-                    Text(categoryClass.currentList)
+                    Text(categoryClass.currentListName)
                         .foregroundColor(Color("almostBlack"))
                         .font(.title)
                         .fontWeight(.bold)
                     Spacer()
                     Button {
-                        print(categoryClass.currentList)
+                        print(categoryClass.currentListURL)
                     } label: {
                         Image(systemName: "ellipsis")
                             .foregroundColor(Color("almostBlack"))
                             .font(.title)
                     }
                 }.padding(.horizontal, 20)
-                List(top40List.top40List, id: \.position) { song in
+                List(top40List.list, id: \.position) { song in
                     ListItemView(player: player, song: song)
-                        //.background(Color.green)
                 }.listStyle(PlainListStyle())
                 .padding(0)
             }

@@ -23,6 +23,12 @@
 		2BE6647825E8539700100BBB /* Top40List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647725E8539700100BBB /* Top40List.swift */; };
 		2BE6647B25E853A900100BBB /* Top40News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647A25E853A900100BBB /* Top40News.swift */; };
 		2BE6647F25E9458D00100BBB /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6647E25E9458D00100BBB /* CategoriesView.swift */; };
+		2BE6648C25EBF6F200100BBB /* CurrentCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6648B25EBF6F200100BBB /* CurrentCategory.swift */; };
+		2BE6649025EBF7F200100BBB /* Tipparade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6648F25EBF7F200100BBB /* Tipparade.swift */; };
+		2BE6649325EBF82600100BBB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649225EBF82600100BBB /* Global.swift */; };
+		2BE6649625EBF83600100BBB /* Airplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649525EBF83600100BBB /* Airplay.swift */; };
+		2BE6649925EBF84500100BBB /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649825EBF84500100BBB /* Streaming.swift */; };
+		2BE6649C25EBF85700100BBB /* Sterren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649B25EBF85700100BBB /* Sterren.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,12 @@
 		2BE6647725E8539700100BBB /* Top40List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40List.swift; sourceTree = "<group>"; };
 		2BE6647A25E853A900100BBB /* Top40News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40News.swift; sourceTree = "<group>"; };
 		2BE6647E25E9458D00100BBB /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		2BE6648B25EBF6F200100BBB /* CurrentCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCategory.swift; sourceTree = "<group>"; };
+		2BE6648F25EBF7F200100BBB /* Tipparade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipparade.swift; sourceTree = "<group>"; };
+		2BE6649225EBF82600100BBB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		2BE6649525EBF83600100BBB /* Airplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay.swift; sourceTree = "<group>"; };
+		2BE6649825EBF84500100BBB /* Streaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
+		2BE6649B25EBF85700100BBB /* Sterren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sterren.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +89,10 @@
 		2BBBA1A025DEE7F00054D6F5 /* Top40 */ = {
 			isa = PBXGroup;
 			children = (
-				2BE6647625E8535700100BBB /* DataConverters */,
+				2BE6647625E8535700100BBB /* Data */,
 				2BBBA1C025DF13900054D6F5 /* Views */,
 				2BBBA1BF25DF13740054D6F5 /* ViewModel */,
 				2BBBA1A125DEE7F00054D6F5 /* Top40App.swift */,
-				2BBBA1BA25DF0CFC0054D6F5 /* Top40.swift */,
 				2BBBA1A525DEE7F10054D6F5 /* Assets.xcassets */,
 				2BBBA1AA25DEE7F10054D6F5 /* Info.plist */,
 				2BBBA1A725DEE7F10054D6F5 /* Preview Content */,
@@ -127,13 +138,20 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		2BE6647625E8535700100BBB /* DataConverters */ = {
+		2BE6647625E8535700100BBB /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2BBBA1BA25DF0CFC0054D6F5 /* Top40.swift */,
+				2BE6648B25EBF6F200100BBB /* CurrentCategory.swift */,
 				2BE6647725E8539700100BBB /* Top40List.swift */,
 				2BE6647A25E853A900100BBB /* Top40News.swift */,
+				2BE6648F25EBF7F200100BBB /* Tipparade.swift */,
+				2BE6649225EBF82600100BBB /* Global.swift */,
+				2BE6649525EBF83600100BBB /* Airplay.swift */,
+				2BE6649825EBF84500100BBB /* Streaming.swift */,
+				2BE6649B25EBF85700100BBB /* Sterren.swift */,
 			);
-			path = DataConverters;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +235,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE6649C25EBF85700100BBB /* Sterren.swift in Sources */,
+				2BE6649025EBF7F200100BBB /* Tipparade.swift in Sources */,
+				2BE6649625EBF83600100BBB /* Airplay.swift in Sources */,
 				2BBBA1C225DF13BA0054D6F5 /* ListView.swift in Sources */,
+				2BE6648C25EBF6F200100BBB /* CurrentCategory.swift in Sources */,
+				2BE6649925EBF84500100BBB /* Streaming.swift in Sources */,
 				2BE6647825E8539700100BBB /* Top40List.swift in Sources */,
 				2BE6647F25E9458D00100BBB /* CategoriesView.swift in Sources */,
 				2BE6647B25E853A900100BBB /* Top40News.swift in Sources */,
 				2BBBA1A425DEE7F00054D6F5 /* ContentView.swift in Sources */,
 				2BBBA1BB25DF0CFC0054D6F5 /* Top40.swift in Sources */,
+				2BE6649325EBF82600100BBB /* Global.swift in Sources */,
 				2BBBA1A225DEE7F00054D6F5 /* Top40App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
