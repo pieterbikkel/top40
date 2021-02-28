@@ -16,21 +16,17 @@ struct Category: Identifiable {
 }
 
 class CurrentCategory: ObservableObject {
-    @Published private var currentList = "Top 40"
-    
-    func getCurrentList() -> String {
-        return currentList
+    @Published private var _currentList = "Top 40"
+
+    var currentList: String {
+        get { return _currentList }
+        set { _currentList = newValue }
     }
-    
-    func setCurrentList(input: String) {
-        currentList = input
-    }
-    
 }
 
 struct CategoriesView: View {
     
-    var categoryClass = CurrentCategory()
+    @ObservedObject var categoryClass: CurrentCategory
     
     let categories = [Category(image: "top40", name: "Top 40", url: ""),
                       Category(image: "tipparade", name: "Tipparade", url: ""),
@@ -49,8 +45,8 @@ struct CategoriesView: View {
                 ForEach(categories) {category in
                     VStack(alignment: .leading,spacing: 12){
                         Button(action : {
-                            categoryClass.setCurrentList(input: category.name)
-                            print(categoryClass.getCurrentList())
+                            categoryClass.currentList = category.name
+                            print(categoryClass.currentList)
                         }, label: {
                             Image(category.image).renderingMode(.original)
                                 .resizable()

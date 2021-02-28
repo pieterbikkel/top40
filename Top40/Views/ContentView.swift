@@ -32,15 +32,15 @@ struct ContentView: View {
                         .fontWeight(.bold)
                     Spacer()
                 }.padding(.horizontal)
-                CategoriesView().padding()
+                CategoriesView(categoryClass: categoryClass).padding()
                 HStack{
-                    Text(categoryClass.getCurrentList())
+                    Text(categoryClass.currentList)
                         .foregroundColor(Color("almostBlack"))
                         .font(.title)
                         .fontWeight(.bold)
                     Spacer()
                     Button {
-                        print(categoryClass.getCurrentList())
+                        print(categoryClass.currentList)
                     } label: {
                         Image(systemName: "ellipsis")
                             .foregroundColor(Color("almostBlack"))
