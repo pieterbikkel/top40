@@ -7,8 +7,6 @@
 
 import Foundation
 import SwiftSoup
-import SwiftUI
-
 
 class Top40List: Top40Response {
     

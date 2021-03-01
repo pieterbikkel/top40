@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7B621D25EDA4A400279368 /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B621B25EDA4A400279368 /* Streaming.swift */; };
+		2B7B621E25EDA4A400279368 /* Airplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B621C25EDA4A400279368 /* Airplay.swift */; };
 		2BBBA1A225DEE7F00054D6F5 /* Top40App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA1A125DEE7F00054D6F5 /* Top40App.swift */; };
 		2BBBA1A425DEE7F00054D6F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA1A325DEE7F00054D6F5 /* ContentView.swift */; };
 		2BBBA1A625DEE7F10054D6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBA1A525DEE7F10054D6F5 /* Assets.xcassets */; };
@@ -26,8 +28,6 @@
 		2BE6648C25EBF6F200100BBB /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6648B25EBF6F200100BBB /* CategoryList.swift */; };
 		2BE6649025EBF7F200100BBB /* Tipparade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6648F25EBF7F200100BBB /* Tipparade.swift */; };
 		2BE6649325EBF82600100BBB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649225EBF82600100BBB /* Global.swift */; };
-		2BE6649625EBF83600100BBB /* Airplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649525EBF83600100BBB /* Airplay.swift */; };
-		2BE6649925EBF84500100BBB /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649825EBF84500100BBB /* Streaming.swift */; };
 		2BE6649C25EBF85700100BBB /* Sterren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6649B25EBF85700100BBB /* Sterren.swift */; };
 		F457502325ED7DD70063400A /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457502225ED7DD70063400A /* PlayList.swift */; };
 		F457502525ED7F2E0063400A /* Top40.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457502425ED7F2E0063400A /* Top40.swift */; };
@@ -35,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7B621B25EDA4A400279368 /* Streaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
+		2B7B621C25EDA4A400279368 /* Airplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airplay.swift; sourceTree = "<group>"; };
 		2BBBA19E25DEE7F00054D6F5 /* Top40.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top40.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBBA1A125DEE7F00054D6F5 /* Top40App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40App.swift; sourceTree = "<group>"; };
 		2BBBA1A325DEE7F00054D6F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,8 +57,6 @@
 		2BE6648B25EBF6F200100BBB /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		2BE6648F25EBF7F200100BBB /* Tipparade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipparade.swift; sourceTree = "<group>"; };
 		2BE6649225EBF82600100BBB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		2BE6649525EBF83600100BBB /* Airplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airplay.swift; sourceTree = "<group>"; };
-		2BE6649825EBF84500100BBB /* Streaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
 		2BE6649B25EBF85700100BBB /* Sterren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sterren.swift; sourceTree = "<group>"; };
 		F457502225ED7DD70063400A /* PlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayList.swift; sourceTree = "<group>"; };
 		F457502425ED7F2E0063400A /* Top40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top40.swift; sourceTree = "<group>"; };
@@ -149,10 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				2BE6647A25E853A900100BBB /* Top40News.swift */,
+				2B7B621C25EDA4A400279368 /* Airplay.swift */,
+				2B7B621B25EDA4A400279368 /* Streaming.swift */,
 				2BE6648F25EBF7F200100BBB /* Tipparade.swift */,
 				2BE6649225EBF82600100BBB /* Global.swift */,
-				2BE6649525EBF83600100BBB /* Airplay.swift */,
-				2BE6649825EBF84500100BBB /* Streaming.swift */,
 				2BE6649B25EBF85700100BBB /* Sterren.swift */,
 			);
 			path = Data;
@@ -262,16 +262,16 @@
 			files = (
 				2BE6649C25EBF85700100BBB /* Sterren.swift in Sources */,
 				2BE6649025EBF7F200100BBB /* Tipparade.swift in Sources */,
-				2BE6649625EBF83600100BBB /* Airplay.swift in Sources */,
 				2BBBA1C225DF13BA0054D6F5 /* ListView.swift in Sources */,
 				2BE6648C25EBF6F200100BBB /* CategoryList.swift in Sources */,
-				2BE6649925EBF84500100BBB /* Streaming.swift in Sources */,
 				F457502325ED7DD70063400A /* PlayList.swift in Sources */,
 				2BE6647825E8539700100BBB /* Top40List.swift in Sources */,
 				2BE6647F25E9458D00100BBB /* CategoriesView.swift in Sources */,
 				2BE6647B25E853A900100BBB /* Top40News.swift in Sources */,
 				2BBBA1A425DEE7F00054D6F5 /* ContentView.swift in Sources */,
 				2BBBA1BB25DF0CFC0054D6F5 /* Top40Response.swift in Sources */,
+				2B7B621E25EDA4A400279368 /* Airplay.swift in Sources */,
+				2B7B621D25EDA4A400279368 /* Streaming.swift in Sources */,
 				F457502725ED89380063400A /* Song.swift in Sources */,
 				F457502525ED7F2E0063400A /* Top40.swift in Sources */,
 				2BE6649325EBF82600100BBB /* Global.swift in Sources */,
@@ -405,7 +405,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Top40/Preview Content\"";
-				DEVELOPMENT_TEAM = 6D674326DK;
+				DEVELOPMENT_TEAM = KB7MXFML57;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Top40/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -416,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PieterBikkel.Top40;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -427,7 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Top40/Preview Content\"";
-				DEVELOPMENT_TEAM = 6D674326DK;
+				DEVELOPMENT_TEAM = KB7MXFML57;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Top40/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -438,7 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PieterBikkel.Top40;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

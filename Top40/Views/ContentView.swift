@@ -19,7 +19,15 @@ struct ContentView: View {
         HStack{
             Text("TOP 40")
                 .fontWeight(.heavy)
-        }
+            Button {
+                print("settings")
+            } label: {
+                Image(systemName: "gearshape")
+                    .foregroundColor(Color("almostBlack"))
+                    .font(.system(size: 24, weight: .regular))
+            }
+
+        }.padding(.horizontal)
         .multilineTextAlignment(.center)
         .font(.largeTitle)
         .padding(.vertical, 10)
@@ -103,9 +111,13 @@ struct ListItemView: View {
             .multilineTextAlignment(.leading)
             VStack {
                 HStack {
-                    Image(systemName: "rosette")
-                        .frame(width: 20, alignment: .leading)
-                    Text(song.piek)
+                    if (song.piek != "piek") {
+                        Image(systemName: "rosette")
+                            .frame(width: 20, alignment: .leading)
+                        Text(song.piek)
+                    } else {
+                        
+                    }
                 }
                 .frame(width: 50, alignment: .leading)
                 HStack {
