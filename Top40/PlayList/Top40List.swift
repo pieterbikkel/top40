@@ -9,22 +9,15 @@ import Foundation
 import SwiftSoup
 import SwiftUI
 
-struct Top40: Identifiable {
-    var id = UUID()
-    var title: String
-    var artist: String
-    var piek: String
-    var position: String
-    var amountOfWeeks: String
-    var iTunesLink: String
-    var songLink: String
-}
 
 class Top40List: Top40Response {
     
-    @Published var top40List: [Top40] = []
+    override init() {
+        super.init()
+        getHTML(url: Category.top40List.rawValue.url)
+    }
     
-    func convertData(innerHTML: String) throws {
+    override func convertData(innerHTML: String) throws {
         let doc = try SwiftSoup.parse(innerHTML)
         let top40Doc: Element = try doc.select("div.chartList").first()!
         let artists = try doc.select("p.artist").array()
@@ -44,6 +37,7 @@ class Top40List: Top40Response {
         }
         
         var songs = [Top40]()
+        
         for i in 0..<artists.count {
             if i < 40 {
                 let title = try titles[i].text()
@@ -57,8 +51,9 @@ class Top40List: Top40Response {
                 songs.append(song)
             }
         }
+        
         DispatchQueue.main.async { [weak self] in
-            self?.top40List = songs
+            self?.list = songs
         }
     }
 }

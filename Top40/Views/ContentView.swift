@@ -9,10 +9,12 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    @State var player = AVPlayer()
+//    @State var player = AVPlayer()
     
-    @ObservedObject private var categoryClass = CurrentCategory()
+//    @ObservedObject private var categoryClass = CurrentCategory()
     @ObservedObject private var top40List = Top40Response()
+    
+    @State private var currentCategory = Category.top40List
     
     var body: some View {
         HStack{
@@ -23,6 +25,7 @@ struct ContentView: View {
         .font(.largeTitle)
         .padding(.vertical, 10)
         .foregroundColor(.red)
+        
         NavigationView() {
             VStack {
                 HStack {
@@ -32,24 +35,30 @@ struct ContentView: View {
                         .fontWeight(.bold)
                     Spacer()
                 }.padding(.horizontal)
-                CategoriesView(categoryClass: categoryClass).padding()
-                HStack{
-                    Text(categoryClass.currentListName)
+                
+                CategoriesView($currentCategory)
+                    .padding()
+                
+                HStack {
+                    
+                    Text(currentCategory.rawValue.name)
                         .foregroundColor(Color("almostBlack"))
                         .font(.title)
                         .fontWeight(.bold)
                     Spacer()
+                    
                     Button {
-                        print(categoryClass.currentListURL)
+                        print(currentCategory.rawValue.url)
                     } label: {
                         Image(systemName: "ellipsis")
                             .foregroundColor(Color("almostBlack"))
                             .font(.title)
                     }
-                }.padding(.horizontal, 20)
-                List(top40List.list, id: \.position) { song in
-                    ListItemView(player: player, song: song)
-                }.listStyle(PlainListStyle())
+                }
+                .padding(.horizontal, 20)
+                
+                PlayList(category: currentCategory)
+                
                 .padding(0)
             }
             .navigationBarHidden(true)
@@ -57,11 +66,11 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 
 struct ListItemView: View {
     
