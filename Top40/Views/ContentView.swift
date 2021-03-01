@@ -12,7 +12,6 @@ struct ContentView: View {
 //    @State var player = AVPlayer()
     
 //    @ObservedObject private var categoryClass = CurrentCategory()
-    @ObservedObject private var top40List = Top40Response()
     
     @State private var currentCategory = Category.top40List
     

@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct PlayList: View {
-    private let top40: Top40Response
+    @ObservedObject private var top40: Top40Response
     private let player = AVPlayer()
     
     init(category: Category) {
