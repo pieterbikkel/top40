@@ -14,19 +14,20 @@ struct CategoryList: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach(Category.allCases) { category in
-                    VStack(alignment: .leading,spacing: 12){
-                        Button(action : {
+                    VStack(alignment: .leading,spacing: 12) {
+                        Button {
                             selection = category
-                        }, label: {
+                        } label: {
                             Image(category.info.image).renderingMode(.original)
                                 .resizable()
                                 .frame(width: 240, height: 180)
                                 .cornerRadius(10)
-                        })
+                        }
                         Text(category.info.name).fontWeight(.heavy)
                     }
                 }
             }
+            .padding(.horizontal)
         }
     }
 }

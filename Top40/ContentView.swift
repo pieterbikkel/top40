@@ -43,7 +43,8 @@ struct ContentView: View {
                 }.padding(.horizontal)
                 
                 CategoryList(selection: $currentCategory)
-                    .padding()
+//                    .ignoresSafeArea()
+//                    .padding()
                 
                 HStack {
                     Text(currentCategory.info.name)
