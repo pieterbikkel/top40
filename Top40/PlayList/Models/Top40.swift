@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Top40: Identifiable {
-    var id = UUID()
+struct Top40: Identifiable, Equatable {
+    var id: String { iTunesLink }
     var title: String
     var artist: String
     var piek: String
