@@ -87,16 +87,28 @@ struct ListItem: View {
     }
     
     private func play() {
-        ListItem.sharedPlayer?.pause()
-        ListItem.sharedPlayer?.seek(to: CMTime.zero)
+        pause()
         selection = song
         ListItem.sharedPlayer = player
         ListItem.sharedPlayer?.play()
+        NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: ListItem.sharedPlayer?.currentItem,
+            queue: .current,
+            using: didEndPlaying)
     }
     
     private func pause() {
+        NotificationCenter
+            .default
+            .removeObserver(ListItem.sharedPlayer?.currentItem as Any)
+        ListItem.sharedPlayer?.seek(to: CMTime.zero)
         ListItem.sharedPlayer?.pause()
         selection = nil
+    }
+    
+    private func didEndPlaying(notification: Notification) {
+        pause()
     }
 }
 
