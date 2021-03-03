@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct SettingView: View {
-    
     var name: String
     
     var body: some View {
-        NavigationLink(
-            destination: SettingDetailView()) {
+        NavigationLink(destination: SettingDetailView()) {
             VStack {
                 Divider()
                 HStack {

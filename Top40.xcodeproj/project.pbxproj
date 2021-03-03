@@ -111,6 +111,7 @@
 			children = (
 				2BBBA1A125DEE7F00054D6F5 /* Top40App.swift */,
 				2BBBA1A325DEE7F00054D6F5 /* ContentView.swift */,
+				F4A91E8825EFAB9400F3CCAB /* Settings */,
 				F457501E25ED75500063400A /* CategoryList */,
 				F457502125ED7DC40063400A /* PlayList */,
 				F46F272725EE67B200F17465 /* Extensions */,
@@ -177,9 +178,6 @@
 			children = (
 				F457502225ED7DD70063400A /* PlayList.swift */,
 				F46F272F25EE691300F17465 /* ListItem.swift */,
-				2B7B622325EEA49B00279368 /* Settings.swift */,
-				2B7B622A25EF82A200279368 /* SettingView.swift */,
-				2B7B844325EFA15F0048968F /* SettingDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +212,16 @@
 				F46F272C25EE687200F17465 /* URL+ExpressibleByStringLiteral.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4A91E8825EFAB9400F3CCAB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B622325EEA49B00279368 /* Settings.swift */,
+				2B7B622A25EF82A200279368 /* SettingView.swift */,
+				2B7B844325EFA15F0048968F /* SettingDetailView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

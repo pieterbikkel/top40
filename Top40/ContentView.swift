@@ -11,13 +11,11 @@ struct ContentView: View {
     @State private var currentCategory = Category.top40List
     
     var body: some View {
-        
-        NavigationView() {
+        NavigationView {
             VStack {
                 ZStack {
                     Text("TOP 40")
                         .fontWeight(.heavy)
-
                     HStack {
                         Spacer()
                         NavigationLink(destination: Settings()) {
@@ -41,8 +39,6 @@ struct ContentView: View {
                 }.padding(.horizontal)
                 
                 CategoryList(selection: $currentCategory)
-//                    .ignoresSafeArea()
-//                    .padding()
                 
                 HStack {
                     Text(currentCategory.info.name)

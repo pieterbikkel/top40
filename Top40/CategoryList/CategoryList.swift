@@ -14,7 +14,7 @@ struct CategoryList: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach(Category.allCases) { category in
-                    VStack(alignment: .leading,spacing: 12) {
+                    VStack(alignment: .leading, spacing: 12) {
                         Button {
                             selection = category
                         } label: {
