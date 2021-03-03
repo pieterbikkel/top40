@@ -10,17 +10,18 @@ import SwiftUI
 struct Settings: View {
     
     init() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [
+            .font : UIFont.systemFont(ofSize: 20, weight: .bold),
+            NSAttributedString.Key.foregroundColor : UIColor(Color("almostBlack"))
+        ]
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().tintColor = .systemRed
     }
     
     var body: some View {
         VStack {
-            Text("Instellingen")
-                .foregroundColor(Color("almostBlack"))
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.bottom)
             SettingView(name: "Support de app")
             SettingView(name: "Kies app icoon")
             SettingView(name: "Feedback")
@@ -28,6 +29,7 @@ struct Settings: View {
             Spacer()
         }
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitle("Instellingen")
     }
 }
 

@@ -59,6 +59,7 @@ struct ContentView: View {
                 PlayList(category: currentCategory)
             }
             .navigationBarHidden(true)
+            .navigationBarTitle("Home")
         }
     }
 }
