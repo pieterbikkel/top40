@@ -20,7 +20,8 @@ struct CategoryList: View {
                         } label: {
                             Image(category.info.image).renderingMode(.original)
                                 .resizable()
-                                .frame(width: 240, height: 180)
+                                .aspectRatio(4 / 3, contentMode: .fill)
+                                .frame(height: 180)
                                 .cornerRadius(10)
                         }
                         Text(category.info.name).fontWeight(.heavy)
