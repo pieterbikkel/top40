@@ -11,6 +11,7 @@ import SwiftSoup
 
 class Top40Response: ObservableObject {
     @Published var list: [Top40] = []
+    @Published var song: [Song] = []
     
     public func getHTML(url: URL) {
         DispatchQueue.global(qos: .userInitiated).async {

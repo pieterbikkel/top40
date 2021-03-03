@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3FB0AE25F04A4800C5E36B /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3FB0AD25F04A4800C5E36B /* SongDetailView.swift */; };
+		2B3FB0B125F04EAA00C5E36B /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3FB0B025F04EAA00C5E36B /* SongData.swift */; };
 		2B7B621D25EDA4A400279368 /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B621B25EDA4A400279368 /* Streaming.swift */; };
 		2B7B621E25EDA4A400279368 /* Airplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B621C25EDA4A400279368 /* Airplay.swift */; };
 		2B7B622425EEA49B00279368 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B622325EEA49B00279368 /* Settings.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B3FB0AD25F04A4800C5E36B /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
+		2B3FB0B025F04EAA00C5E36B /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
 		2B7B621B25EDA4A400279368 /* Streaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
 		2B7B621C25EDA4A400279368 /* Airplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airplay.swift; sourceTree = "<group>"; };
 		2B7B622325EEA49B00279368 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -135,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				2BBBA1C125DF13BA0054D6F5 /* ListView.swift */,
-				F457502625ED89380063400A /* Song.swift */,
 				2BE6647A25E853A900100BBB /* Top40News.swift */,
 			);
 			path = "Currently not used";
@@ -178,6 +181,7 @@
 			children = (
 				F457502225ED7DD70063400A /* PlayList.swift */,
 				F46F272F25EE691300F17465 /* ListItem.swift */,
+				2B3FB0AD25F04A4800C5E36B /* SongDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 				2BE6648F25EBF7F200100BBB /* Tipparade.swift */,
 				2BE6649225EBF82600100BBB /* Global.swift */,
 				2BE6649B25EBF85700100BBB /* Sterren.swift */,
+				2B3FB0B025F04EAA00C5E36B /* SongData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 		F46F272625EE65A900F17465 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F457502625ED89380063400A /* Song.swift */,
 				F457502425ED7F2E0063400A /* Top40.swift */,
 			);
 			path = Models;
@@ -309,6 +315,7 @@
 				2BE6649C25EBF85700100BBB /* Sterren.swift in Sources */,
 				2BE6649025EBF7F200100BBB /* Tipparade.swift in Sources */,
 				2BBBA1C225DF13BA0054D6F5 /* ListView.swift in Sources */,
+				2B3FB0AE25F04A4800C5E36B /* SongDetailView.swift in Sources */,
 				2BE6648C25EBF6F200100BBB /* Category.swift in Sources */,
 				F457502325ED7DD70063400A /* PlayList.swift in Sources */,
 				2BE6647825E8539700100BBB /* Top40List.swift in Sources */,
@@ -323,6 +330,7 @@
 				2B7B621E25EDA4A400279368 /* Airplay.swift in Sources */,
 				2B7B621D25EDA4A400279368 /* Streaming.swift in Sources */,
 				F457502725ED89380063400A /* Song.swift in Sources */,
+				2B3FB0B125F04EAA00C5E36B /* SongData.swift in Sources */,
 				F457502525ED7F2E0063400A /* Top40.swift in Sources */,
 				2B7B622425EEA49B00279368 /* Settings.swift in Sources */,
 				2BE6649325EBF82600100BBB /* Global.swift in Sources */,
