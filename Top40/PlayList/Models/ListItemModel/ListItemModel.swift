@@ -14,8 +14,6 @@ struct ListItemModel {
     private let player: AVPlayer
     @Binding private var selection: Top40?
     
-    private var test = false
-    
     var isPlaying: Bool {
         return Optional(song) == selection
     }
