@@ -13,7 +13,7 @@ struct Settings: View {
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [
             .font : UIFont.systemFont(ofSize: 20, weight: .bold),
-            NSAttributedString.Key.foregroundColor : UIColor(Color("almostBlack"))
+            .foregroundColor : UIColor(Color("almostBlack"))
         ]
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().standardAppearance = appearance

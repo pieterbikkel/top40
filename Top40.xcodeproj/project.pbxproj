@@ -41,6 +41,7 @@
 		F46F272B25EE680F00F17465 /* AVPlayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F272A25EE680F00F17465 /* AVPlayer+.swift */; };
 		F46F272D25EE687200F17465 /* URL+ExpressibleByStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F272C25EE687200F17465 /* URL+ExpressibleByStringLiteral.swift */; };
 		F46F273025EE691300F17465 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F272F25EE691300F17465 /* ListItem.swift */; };
+		F4F7D0B625F05E220088DD20 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7D0B525F05E220088DD20 /* TopBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		F46F272A25EE680F00F17465 /* AVPlayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+.swift"; sourceTree = "<group>"; };
 		F46F272C25EE687200F17465 /* URL+ExpressibleByStringLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ExpressibleByStringLiteral.swift"; sourceTree = "<group>"; };
 		F46F272F25EE691300F17465 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		F4F7D0B525F05E220088DD20 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,7 @@
 			children = (
 				2BBBA1A125DEE7F00054D6F5 /* Top40App.swift */,
 				2BBBA1A325DEE7F00054D6F5 /* ContentView.swift */,
-				F4A91E8825EFAB9400F3CCAB /* Settings */,
+				F4A91E8825EFAB9400F3CCAB /* TopBar */,
 				F457501E25ED75500063400A /* CategoryList */,
 				F457502125ED7DC40063400A /* PlayList */,
 				F46F272725EE67B200F17465 /* Extensions */,
@@ -220,14 +222,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F4A91E8825EFAB9400F3CCAB /* Settings */ = {
+		F4A91E8825EFAB9400F3CCAB /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
+				F4F7D0B525F05E220088DD20 /* TopBar.swift */,
 				2B7B622325EEA49B00279368 /* Settings.swift */,
 				2B7B622A25EF82A200279368 /* SettingView.swift */,
 				2B7B844325EFA15F0048968F /* SettingDetailView.swift */,
 			);
-			path = Settings;
+			path = TopBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +322,7 @@
 				2BE6648C25EBF6F200100BBB /* Category.swift in Sources */,
 				F457502325ED7DD70063400A /* PlayList.swift in Sources */,
 				2BE6647825E8539700100BBB /* Top40List.swift in Sources */,
+				F4F7D0B625F05E220088DD20 /* TopBar.swift in Sources */,
 				2BE6647F25E9458D00100BBB /* CategoryList.swift in Sources */,
 				F46F272B25EE680F00F17465 /* AVPlayer+.swift in Sources */,
 				2BE6647B25E853A900100BBB /* Top40News.swift in Sources */,
