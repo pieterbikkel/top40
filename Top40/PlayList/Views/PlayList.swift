@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 struct PlayList: View {
     @ObservedObject private var top40Response: Top40Response
-    @State private var playingSong: Top40?
+    @State var songPlaying: Top40?
     private var category: Category
     
     init(category: Category) {
@@ -36,7 +35,7 @@ struct PlayList: View {
             .padding(.horizontal, 20)
             
             List(top40Response.list, id: \.position) { song in
-                ListItem(song: song, selection: $playingSong)
+                ListItem(song: song, selection: $songPlaying)
             }
             .listStyle(PlainListStyle())
         }
